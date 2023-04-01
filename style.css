@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&family=Space+Mono:wght@700&display=swap');
+
+:root {
+    --black: #171321;
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-turquise: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+
+    --font-size: 24px;
+    --sans: 'Space Mono', monospace;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: var(--light-turquise);
+    margin: 0;
+    padding: 0;
+    color: var(--dark-grayish-cyan);
+    font-family: var(--sans);
+    font-size: 12px;
+}
+
+nav {
+    padding: 15px;
+    text-align: center;
+}
+
+.grid-container {
+    background-color: var(--white);
+    
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    
+}
+
+
+/*input boxes*/
+
+
+
+/*bill*/
+
+.bill{
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.bill input{
+    background-color: var(--very-light-grayish-cyan);
+    text-align: center;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.bill svg{
+    position: relative;
+    bottom: 28px;
+    left: 10px;
+}
+
+/*tips*/
+
+.tips{
+    margin: 0 auto 0 auto;
+    display: ;
+
+}
+
+/**/
