@@ -61,7 +61,7 @@ nav {
     background-color: var(--very-light-grayish-cyan);
     text-align: center;
     width: 90%;
-    border: 1px solid black;
+    border: 1px solid var(--very-light-grayish-cyan);
     border-radius: 5px;
     padding: 10px;
 }
@@ -74,10 +74,97 @@ nav {
 
 /*tips*/
 
-.tips{
+.tips-table{
     margin: 0 auto 0 auto;
-    display: ;
-
 }
 
-/**/
+.tips-percentages{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
+.tips-percentages button{
+    background-color: var(--very-dark-cyan);
+    border: 1px solid var(--very-dark-cyan);
+    color: var(--white);
+    border-radius: 5px;
+    font-family: var(--sans);
+    font-size: 20px;
+    padding: 5px;
+}
+
+.tips-percentages button:last-child{
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--grayish-cyan);
+    border: var(--very-light-grayish-cyan);
+}
+
+/*number of people*/
+
+.number-of-people{
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.number-of-people input{
+    background-color: var(--very-light-grayish-cyan);
+    text-align: center;
+    width: 90%;
+    border: 1px solid var(--very-light-grayish-cyan);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.number-of-people svg{
+    position: relative;
+    bottom: 28px;
+    left: 10px;
+}
+
+/*Sum box*/
+
+.Sum-box{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--very-dark-cyan);
+    border-radius: 20px;
+    color: var(--very-light-grayish-cyan);
+}
+
+.tip-amount, .total-amount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 22px 5px 22px;
+}
+
+.tip-amount ul, .total-amount ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.tip-amount ul li:last-child, .total-amount ul li:last-child{
+    color: var(--grayish-cyan);
+}
+
+.tip-amount span, .total-amount span{
+    color: var(--strong-cyan);
+    font-size: var(--font-size);
+}
+
+.Sum-box button{
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    border-radius: 5px;
+    border: 1px solid var(--strong-cyan);
+    font-family: var(--sans);
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px;
+    padding: 10px;
+
+
+}
