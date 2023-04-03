@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="C:\Users\EmmanuelOlubi\Documents\tip-calculator-app\tip-calculator-app\style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="C:\Users\EmmanuelOlubi\Documents\js-project\js_projects\tip-calculator-app-main\images\favicon-32x32.png">
+  <script src="./script.js"></script>
   <title>Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,6 +15,7 @@
   </style>
 </head>
 <body>
+    <div class="Full-content">
   <nav>
     <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="87" height="54">
       <path fill="#3D6666"
@@ -32,13 +33,15 @@
   <div class="tips-table">
   <p>Select Tip %</p>
   <div class="tips-percentages">
-    
-        <button>5%</button>
-        <button>10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <button>Custom</button>
+
+
+        <input type="button" value="5%">  
+        <input type="button" value="10%">
+        <input type="button" value="15%">
+        <input type="button" value="20%">
+        <input type="button" value="50%">
+        <input type="number" placeholder="Custom">  
+        
        
   
 </div>
@@ -58,7 +61,7 @@
         <li>/ person</li>
     </ul>
 
-    <span>
+    <span class="price">
         $4.27
     </span>
   </div>
@@ -70,19 +73,15 @@
         <li>Total</li>
         <li>/ person</li>
     </ul>
-    <span>
+    <span class="price">
         $32.79
     </span>
   </div>
 
-  <button>Reset</button>
+  <button id="reset">Reset</button>
  </div>
 </section>
 </main>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Emmanuel O</a>.
-  
-
+</div>
 </body>
 </html>
