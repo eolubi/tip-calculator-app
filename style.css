@@ -1,104 +1,252 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&family=Space+Mono:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&family=Space+Mono:wght@700&display=swap");
 
 :root {
-    --black: #171321;
-    --strong-cyan: hsl(172, 67%, 45%);
-    --very-dark-cyan: hsl(183, 100%, 15%);
-    --dark-grayish-cyan: hsl(186, 14%, 43%);
-    --grayish-cyan: hsl(184, 14%, 56%);
-    --light-turquise: hsl(185, 41%, 84%);
-    --very-light-grayish-cyan: hsl(189, 41%, 97%);
-    --white: hsl(0, 0%, 100%);
+  --black: #171321;
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-turquise: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
 
-    --font-size: 24px;
-    --sans: 'Space Mono', monospace;
+  --font-size: 24px;
+  --sans: "Space Mono", monospace;
 }
 
 html {
+  box-sizing: border-box;
+}
 
-    box-sizing: border-box;
-    
-    }
-    
-    *,
-    
-    *::before,
-    
-    *::after {
-    
-    box-sizing: inherit;
-    
-    }
-
-
-
-
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
-    background-color: var(--light-turquise);
-    margin:0;
-    padding: 0;
-    color: var(--dark-grayish-cyan);
-    font-family: var(--sans);
-    font-size: 12px;
-    width: 375px;
+  background-color: var(--light-turquise);
+  margin: 0;
+  padding: 0;
+  color: var(--dark-grayish-cyan);
+  font-family: var(--sans);
+  font-size: 12px;
 }
 
 nav {
-    padding: 25px;
-    text-align: center;
+  padding: 25px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .grid-container {
-    background-color: var(--white);
-    border-radius: 10px 10px 0 0;
-    padding: 32px 30px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 1.5rem;
-    
+  background-color: var(--white);
+  border-radius: 10px 10px 0 0;
+  padding: 32px 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
-
 
 /*input boxes*/
 
-
-
 /*bill*/
 
-.bill{
-    display: flex;
-    flex-direction: column;
+.bill {
+  display: flex;
+  flex-direction: column;
 }
 
-.bill input{
-    background-color: var(--very-light-grayish-cyan);
-    text-align: center;
-    width: 90%;
-    border: 1px solid var(--very-light-grayish-cyan);
-    border-radius: 5px;
-    padding: 10px;
+.bill input {
+  background-color: var(--very-light-grayish-cyan);
+  text-align: center;
+  width: 90%;
+  border: 1px solid var(--very-light-grayish-cyan);
+  border-radius: 5px;
+  padding: 10px;
 }
 
-.bill svg{
-    position: relative;
-    bottom: 28px;
-    left: 10px;
+.dollar-img {
+  position: relative;
+  top: 25px;
+  width: 11px;
+  height: 17px;
 }
 
 /*tips*/
 
-
-
-.tips-percentages{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: auto;
-    gap: 1rem;
+.tips-percentages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
 }
 
-.tips-percentages input{
+.tips-percentages button {
+  background-color: var(--very-dark-cyan);
+  border: 1px solid var(--very-dark-cyan);
+  color: var(--white);
+  border-radius: 5px;
+  font-family: var(--sans);
+  font-size: 20px;
+  padding: 5px;
+  width: 100%;
+}
+
+.tips-percentages input {
+  background-color: var(--very-light-grayish-cyan);
+  color: var(--grayish-cyan);
+  border: var(--very-light-grayish-cyan);
+}
+
+/*number of people*/
+
+.number-of-people {
+  display: flex;
+  flex-direction: column;
+}
+
+.number-of-people input {
+  background-color: var(--very-light-grayish-cyan);
+  text-align: center;
+  width: 90%;
+  border: 1px solid var(--very-light-grayish-cyan);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.people-img {
+  position: relative;
+  top: 25px;
+  left: 20px;
+  width: 11px;
+  height: 17px;
+}
+
+/*Sum box*/
+
+.Sum-box {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--very-dark-cyan);
+  border-radius: 20px;
+  color: var(--very-light-grayish-cyan);
+}
+
+.tip-amount,
+.total-amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 22px 5px 22px;
+}
+
+.tip-amount ul,
+.total-amount ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tip-amount ul li:last-child,
+.total-amount ul li:last-child {
+  color: var(--grayish-cyan);
+}
+
+.tip-amount span,
+.total-amount span {
+  color: var(--strong-cyan);
+  font-size: var(--font-size);
+}
+
+.Sum-box button {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  border-radius: 5px;
+  border: 1px solid var(--strong-cyan);
+  font-family: var(--sans);
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px;
+  padding: 10px;
+  position: relative;
+  top: 5rem;
+}
+
+/* Media query for responsiveness Desktop */
+@media screen and (min-width: 1440px) {
+  .Full-content {
+    width: 100%;
+  }
+
+  body {
+    background-color: var(--light-turquise);
+    margin: 0;
+    padding: 0;
+    color: var(--dark-grayish-cyan);
+    font-family: var(--sans);
+    font-size: 12px;
+    margin: 0 auto 0 auto;
+  }
+
+  nav {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .grid-container {
+    background-color: var(--white);
+    border-radius: 10px 10px 0 0;
+    padding: 32px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /*bill section*/
+
+  .bill {
+    display: flex;
+    flex-direction: column;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .bill input {
+    background-color: var(--very-light-grayish-cyan);
+    text-align: right;
+    width: 90%;
+    border: 1px solid var(--very-light-grayish-cyan);
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .dollar-img {
+    position: relative;
+    top: 25px;
+    width: 11px;
+    height: 17px;
+  }
+
+  /*tips*/
+
+  .tips-percentages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .tips-percentages button {
     background-color: var(--very-dark-cyan);
     border: 1px solid var(--very-dark-cyan);
     color: var(--white);
@@ -107,70 +255,81 @@ nav {
     font-size: 20px;
     padding: 5px;
     width: 100%;
-}
+  }
 
-.tips-percentages input:last-child{
+  .tips-percentages input {
     background-color: var(--very-light-grayish-cyan);
     color: var(--grayish-cyan);
     border: var(--very-light-grayish-cyan);
-}
+    font-size: 12px;
+    text-align: center;
+  }
 
-/*number of people*/
+  /*number of people*/
 
-.number-of-people{
-   
+  .number-of-people {
     display: flex;
     flex-direction: column;
-}
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
 
-.number-of-people input{
+  .number-of-people input {
     background-color: var(--very-light-grayish-cyan);
     text-align: center;
     width: 90%;
     border: 1px solid var(--very-light-grayish-cyan);
     border-radius: 5px;
     padding: 10px;
-}
+  }
 
-.number-of-people svg{
+  .people-img {
     position: relative;
-    bottom: 28px;
-    left: 10px;
-}
+    top: 25px;
+    left: 20px;
+    width: 11px;
+    height: 17px;
+  }
 
-/*Sum box*/
+  /*Sum box*/
 
-.Sum-box{
+  .Sum-box {
     display: flex;
     flex-direction: column;
     background-color: var(--very-dark-cyan);
     border-radius: 20px;
     color: var(--very-light-grayish-cyan);
-}
+    grid-row: 1/4;
+    grid-column: 2/3;
+  }
 
-.tip-amount, .total-amount{
+  .tip-amount,
+  .total-amount {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 16px 22px 5px 22px;
-}
+  }
 
-.tip-amount ul, .total-amount ul{
+  .tip-amount ul,
+  .total-amount ul {
     list-style-type: none;
     padding: 0;
-}
+  }
 
-.tip-amount ul li:last-child, .total-amount ul li:last-child{
+  .tip-amount ul li:last-child,
+  .total-amount ul li:last-child {
     color: var(--grayish-cyan);
-}
+  }
 
-.tip-amount span, .total-amount span{
+  .tip-amount span,
+  .total-amount span {
     color: var(--strong-cyan);
     font-size: var(--font-size);
-}
+  }
 
-.Sum-box button{
+  .Sum-box button {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
     border-radius: 5px;
@@ -180,333 +339,161 @@ nav {
     cursor: pointer;
     margin: 20px;
     padding: 10px;
+  }
 }
 
-@media screen and (min-width:1440px) {
+/* Media query for responsiveness (mobile phones)*/
+@media screen and (max-width: 375px) {
+  html {
+    box-sizing: border-box;
+  }
 
-    .Full-content{
-        width: 100%;
-    }
+  body {
+    background-color: var(--light-turquise);
+    margin: 0;
+    padding: 0;
+    color: var(--dark-grayish-cyan);
+    font-family: var(--sans);
+    font-size: 12px;
+  }
 
-    
-    body {
-        background-color: var(--light-turquise);
-        margin: 0;
-        padding: 0;
-        color: var(--dark-grayish-cyan);
-        font-family: var(--sans);
-        font-size: 12px;
-        margin: 0 auto 0 auto;
-        
-    
-    }
-    
-    nav {
-        padding: 25px;
-        text-align: center;
-    }
-    
-    .grid-container {
-        background-color: var(--white);
-        border-radius: 10px 10px 0 0;
-        padding: 32px 30px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3,auto);
-        gap: 1.5rem;
-        width: 100%;
-        
-    }
-    
-    
-    /*input boxes*/
-    
-    
-    
-    /*bill*/
-    
-    .bill{
-        display: flex;
-        flex-direction: column;
-        grid-row: 1/2;
-        grid-column: 1/2;
-    }
-    
-    .bill input{
-        background-color: var(--very-light-grayish-cyan);
-        text-align: right;
-        width: 90%;
-        border: 1px solid var(--very-light-grayish-cyan);
-        border-radius: 5px;
-        padding: 10px;
-    }
-    
-    .bill svg{
-        position: relative;
-        bottom: 28px;
-        left: 10px;
-    }
-    
-    /*tips*/
-    
-    
-    
-    .tips-percentages{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 1rem;
-        grid-row: 2/3;
-        grid-column: 1/2;
-    }
-    
-    .tips-percentages input{
-        background-color: var(--very-dark-cyan);
-        border: 1px solid var(--very-dark-cyan);
-        color: var(--white);
-        border-radius: 5px;
-        font-family: var(--sans);
-        font-size: 20px;
-        padding: 5px;
-        width: 100%;
+  nav {
+    padding: 25px;
+    text-align: center;
+  }
 
-    }
-    
-    .tips-percentages input:last-child{
-        background-color: var(--very-light-grayish-cyan);
-        color: var(--grayish-cyan);
-        border: var(--very-light-grayish-cyan);
-        
-    }
-    
-    /*number of people*/
-    
-    .number-of-people{
-       
-        display: flex;
-        flex-direction: column;
-        grid-row: 3/4;
-        grid-column: 1/2;
-    }
-    
-    .number-of-people input{
-        background-color: var(--very-light-grayish-cyan);
-        text-align: center;
-        width: 90%;
-        border: 1px solid var(--very-light-grayish-cyan);
-        border-radius: 5px;
-        padding: 10px;
-    }
-    
-    .number-of-people svg{
-        position: relative;
-        bottom: 28px;
-        left: 10px;
-    }
-    
-    /*Sum box*/
-    
-    .Sum-box{
-        display: flex;
-        flex-direction: column;
-        background-color: var(--very-dark-cyan);
-        border-radius: 20px;
-        color: var(--very-light-grayish-cyan);
-        grid-row: 1/4;
-        grid-column: 2/3;
-    }
-    
-    .tip-amount, .total-amount{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px 22px 5px 22px;
-    }
-    
-    .tip-amount ul, .total-amount ul{
-        list-style-type: none;
-        padding: 0;
-    }
-    
-    .tip-amount ul li:last-child, .total-amount ul li:last-child{
-        color: var(--grayish-cyan);
-    }
-    
-    .tip-amount span, .total-amount span{
-        color: var(--strong-cyan);
-        font-size: var(--font-size);
-    }
-    
-    .Sum-box button{
-        background-color: var(--strong-cyan);
-        color: var(--very-dark-cyan);
-        border-radius: 5px;
-        border: 1px solid var(--strong-cyan);
-        font-family: var(--sans);
-        font-size: 16px;
-        cursor: pointer;
-        margin: 20px;
-        padding: 10px;
-    }
-}
+  .grid-container {
+    background-color: var(--white);
+    border-radius: 10px 10px 0 0;
+    padding: 32px 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
 
-@media screen and (max-width:375px) {
-    html {
-        box-sizing: border-box;
-    }
-    
-    
-    
-    
-    
-    body {
-        background-color: var(--light-turquise);
-        margin:0;
-        padding: 0;
-        color: var(--dark-grayish-cyan);
-        font-family: var(--sans);
-        font-size: 12px;
-        width: 375px;
-    }
-    
-    nav {
-        padding: 25px;
-        text-align: center;
-    }
-    
-    .grid-container {
-        background-color: var(--white);
-        border-radius: 10px 10px 0 0;
-        padding: 32px 30px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 1.5rem;
-        
-    }
-    
-    
-    /*input boxes*/
-    
-    
-    
-    /*bill*/
-    
-    .bill{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .bill input{
-        background-color: var(--very-light-grayish-cyan);
-        text-align: center;
-        width: 90%;
-        border: 1px solid var(--very-light-grayish-cyan);
-        border-radius: 5px;
-        padding: 10px;
-    }
-    
-    .bill svg{
-        position: relative;
-        bottom: 28px;
-        left: 10px;
-    }
-    
-    /*tips*/
-    
-   
-    
-    .tips-percentages{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        gap: 1rem;
-    }
-    
-    .tips-percentages input{
-        background-color: var(--very-dark-cyan);
-        border: 1px solid var(--very-dark-cyan);
-        color: var(--white);
-        border-radius: 5px;
-        font-family: var(--sans);
-        font-size: 20px;
-        padding: 5px;
-        width: 100%;
+  /*bill*/
 
-    }
-    
-    .tips-percentages input:last-child{
-        background-color: var(--very-light-grayish-cyan);
-        color: var(--grayish-cyan);
-        border: var(--very-light-grayish-cyan);
-    }
-    
-    /*number of people*/
-    
-    .number-of-people{
-       
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .number-of-people input{
-        background-color: var(--very-light-grayish-cyan);
-        text-align: center;
-        width: 90%;
-        border: 1px solid var(--very-light-grayish-cyan);
-        border-radius: 5px;
-        padding: 10px;
-        width: 100%;
-    }
-    
-    .number-of-people svg{
-        position: relative;
-        bottom: 28px;
-        left: 10px;
-    }
-    
-    /*Sum box*/
-    
-    .Sum-box{
-        display: flex;
-        flex-direction: column;
-        background-color: var(--very-dark-cyan);
-        border-radius: 20px;
-        color: var(--very-light-grayish-cyan);
-    }
-    
-    .tip-amount, .total-amount{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px 22px 5px 22px;
-    }
-    
-    .tip-amount ul, .total-amount ul{
-        list-style-type: none;
-        padding: 0;
-    }
-    
-    .tip-amount ul li:last-child, .total-amount ul li:last-child{
-        color: var(--grayish-cyan);
-    }
-    
-    .tip-amount span, .total-amount span{
-        color: var(--strong-cyan);
-        font-size: var(--font-size);
-    }
-    
-    .Sum-box button{
-        background-color: var(--strong-cyan);
-        color: var(--very-dark-cyan);
-        border-radius: 5px;
-        border: 1px solid var(--strong-cyan);
-        font-family: var(--sans);
-        font-size: 16px;
-        cursor: pointer;
-        margin: 20px;
-        padding: 10px;
-    }
+  .bill {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .bill input {
+    background-color: var(--very-light-grayish-cyan);
+    text-align: center;
+    width: 90%;
+    border: 1px solid var(--very-light-grayish-cyan);
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .dollar-img {
+    position: relative;
+    top: 25px;
+    width: 11px;
+    height: 17px;
+  }
+
+  /*tips*/
+
+  .tips-percentages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+
+  .tips-percentages button {
+    background-color: var(--very-dark-cyan);
+    border: 1px solid var(--very-dark-cyan);
+    color: var(--white);
+    border-radius: 5px;
+    font-family: var(--sans);
+    font-size: 20px;
+    padding: 5px;
+    width: 100%;
+  }
+
+  .tips-percentages input {
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--grayish-cyan);
+    border: var(--very-light-grayish-cyan);
+  }
+
+  /*number of people*/
+
+  .number-of-people {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .number-of-people input {
+    background-color: var(--very-light-grayish-cyan);
+    text-align: center;
+    width: 90%;
+    border: 1px solid var(--very-light-grayish-cyan);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .people-img {
+    position: relative;
+    top: 25px;
+    left: 20px;
+    width: 11px;
+    height: 17px;
+  }
+
+  /*Sum box*/
+
+  .Sum-box {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--very-dark-cyan);
+    border-radius: 20px;
+    color: var(--very-light-grayish-cyan);
+  }
+
+  .tip-amount,
+  .total-amount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 22px 5px 22px;
+  }
+
+  .tip-amount ul,
+  .total-amount ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .tip-amount ul li:last-child,
+  .total-amount ul li:last-child {
+    color: var(--grayish-cyan);
+  }
+
+  .tip-amount span,
+  .total-amount span {
+    color: var(--strong-cyan);
+    font-size: var(--font-size);
+  }
+
+  .Sum-box button {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    border-radius: 5px;
+    border: 1px solid var(--strong-cyan);
+    font-family: var(--sans);
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px;
+    padding: 10px;
+  }
 }
